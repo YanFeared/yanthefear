@@ -3,12 +3,6 @@ local license = ...
 repeat task.wait() until game:IsLoaded()
 if shared.vape then shared.vape:Uninject() end
 
-if identifyexecutor then
-	if table.find({'Wave', 'Seliware', 'Volt', 'Nihon', 'Synapse Z'}, ({identifyexecutor()})[1]) then
-		getgenv().setthreadidentity = nil
-	end -- might aswell just blacklist every executor atp
-end
-
 local vape
 local loadstring = function(...)
 	local res, err = loadstring(...)
@@ -138,6 +132,7 @@ if not isfolder('catrewrite/assets/'..gui) then
 end
 vape = loadstring(downloadFile('catrewrite/guis/'..gui..'.lua'), 'gui')()
 shared.vape = vape
+_G.vape = shared.vape or {'?'}
 
 if not shared.VapeIndependent then
 	loadstring(downloadFile('catrewrite/games/universal.lua'), 'universal')()
