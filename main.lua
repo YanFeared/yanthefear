@@ -138,6 +138,10 @@ local function finishLoading()
 			end
 		end
 
+		pcall(function()
+			vape:Remove('Auto Dodge')
+		end)
+
 		if vape.Categories.Main.Options['GUI bind indicator'].Enabled then
 			task.wait(0.5)
 			vape:CreateNotification('Finished Loading', vape.VapeButton and 'Press the button in the top right to open GUI' or 'Press '..table.concat(vape.Keybind, ' + '):upper()..' to open GUI', 5)
