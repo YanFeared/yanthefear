@@ -2781,8 +2781,8 @@ run(function() --> by max
 	SwingRange = Killaura:CreateSlider({
 		Name = 'Swing range',
 		Min = 1,
-		Max = 22,
-		Default = 22,
+		Max = 45,
+		Default = 44,
 		Function = function(val)
 			if RangeVisualiser then
 				RangeVisualiser.Size = Vector3.new(val * 0.7, 0.01, val  * 0.7)
@@ -2829,8 +2829,8 @@ run(function() --> by max
 	UpdateRate = Killaura:CreateSlider({
 		Name = 'Update rate',
 		Min = 1,
-		Max = 240,
-		Default = 120,
+		Max = 500,
+		Default = 450,
 		Suffix = 'hz'
 	})
 	Mode = Killaura:CreateDropdown({
